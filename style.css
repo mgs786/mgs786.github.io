@@ -1,21 +1,17 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('background.jpeg') no-repeat center center/cover fixed;
+  background: url('background.jpeg') center/cover no-repeat fixed;
   color: white;
 }
 
-/* FIXED DARK OVERLAY */
 .overlay {
-  background: rgba(0, 0, 0, 0.7); /* 🔥 KEY FIX */
-  min-height: 100vh;
+  background: rgba(0,0,0,0.75);
 }
 
 /* NAV */
@@ -26,27 +22,21 @@ header {
   display: flex;
   justify-content: space-between;
   background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
 .logo {
   font-size: 28px;
-  font-weight: 900;
+  font-weight: bold;
   color: #ff3b3b;
 }
 
-/* NAV LINKS FIX */
 nav a {
-  margin-left: 25px;
+  margin-left: 20px;
   text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ff3b3b;
+  color: white;
+  font-weight: bold;
 }
 
 /* HERO */
@@ -58,36 +48,31 @@ nav a:hover {
   text-align: center;
 }
 
-/* 🔥 DOMINATING TITLE */
 .main-title {
   font-size: 90px;
   font-weight: 900;
-  color: white;
 }
 
-/* 🔥 STRONG SUBTITLE */
 .subtitle {
   font-size: 30px;
   color: #ff3b3b;
-  font-weight: 800;
+  font-weight: bold;
 }
 
-/* TEXT */
 .hero-text {
   max-width: 700px;
   margin: 20px auto;
   color: #ccc;
-  font-size: 18px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
   padding: 12px 25px;
   margin: 10px;
   border-radius: 8px;
   border: 2px solid white;
   text-decoration: none;
-  font-weight: bold;
+  color: white;
 }
 
 .primary {
@@ -102,7 +87,6 @@ nav a:hover {
   margin: auto;
 }
 
-/* 🔥 STRONG HEADINGS */
 .section-title {
   font-size: 48px;
   font-weight: 900;
@@ -117,26 +101,16 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
 }
 
-/* 🔥 FIXED CARDS */
+/* CARD */
 .card {
   padding: 25px;
   border-radius: 15px;
-  background: rgba(0,0,0,0.85); /* 🔥 CRITICAL FIX */
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.85);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-/* 🔥 IMAGE FIX (NO MORE GHOST) */
-.about-image {
-  width: 280px;
-  border-radius: 20px;
-  margin-top: 20px;
-  opacity: 1; /* FIX */
-  position: relative; /* FIX */
+  transform: translateY(-10px) scale(1.03);
 }
 
 /* SKILLS */
@@ -149,9 +123,22 @@ nav a:hover {
   background: rgba(0,0,0,0.7);
   padding: 15px;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
-/* APPLE-LIKE ANIMATION */
+.skill-block:hover {
+  transform: scale(1.08);
+  background: rgba(255,59,59,0.3);
+}
+
+/* IMAGE */
+.about-image {
+  width: 260px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(60px);
