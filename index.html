@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Ghous Salman</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Ghous Salman</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background: url('background.jpeg') center/cover no-repeat fixed;
+    }
+
+    .overlay {
+      background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.7),
+        rgba(0,50,40,0.6),
+        rgba(255,0,0,0.2)
+      );
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+  </style>
 </head>
 
-<body>
+<body class="text-white">
 
-<header>
-  <h1 class="logo" onclick="scrollTopPage()">MGS</h1>
+<div class="overlay min-h-screen">
 
-  <nav>
+<!-- NAVBAR -->
+<header class="flex justify-between px-10 py-5 fixed w-full bg-black/40 backdrop-blur z-50">
+  <h1 class="text-2xl text-red-400 font-bold cursor-pointer" onclick="scrollTopPage()">MGS</h1>
+
+  <nav class="space-x-6 text-green-300">
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
@@ -23,113 +51,166 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="h-screen flex flex-col justify-center items-center text-center px-5">
 
-  <h1 class="main-title">Muhammad Ghous Salman</h1>
+  <h1 class="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-white to-green-300 bg-clip-text text-transparent">
+    Muhammad Ghous Salman
+  </h1>
 
-  <h2 class="subtitle">🚀 Software Engineer | AI/ML Specialist</h2>
-
-  <p class="hero-text">
-    Building scalable backend systems, intelligent AI-powered applications,
-    and production-ready software that solves real-world problems.
+  <p class="text-red-400 mt-5 text-xl">
+    🚀 Software Engineer | AI/ML Specialist
   </p>
 
-  <div class="buttons">
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="#contact" class="btn">Contact Me</a>
+  <p class="mt-4 max-w-xl text-gray-300">
+    Building scalable backend systems, intelligent AI-powered applications, and production-ready software that solves real-world problems.
+  </p>
+
+  <div class="mt-6 space-x-4">
+    <a href="#projects" class="bg-red-500 px-6 py-2 rounded hover:scale-105 transition">View Projects</a>
+    <a href="#contact" class="border px-6 py-2 rounded hover:bg-white hover:text-black transition">Contact</a>
   </div>
 
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="container">
-  <h2>👨‍💻 About Me</h2>
-  <p>
+<section id="about" class="py-24 px-6 max-w-6xl mx-auto relative">
+
+  <h2 class="text-4xl text-green-300 mb-6">👨‍💻 About Me</h2>
+
+  <!-- blended image -->
+  <img src="profile.jpeg" class="absolute right-10 top-20 w-64 opacity-20 rounded-xl"/>
+
+  <p class="text-gray-300 leading-8 max-w-3xl">
     Computer Science student at Stony Brook University specializing in Artificial Intelligence & Data Science.
-    Passionate about designing scalable systems, backend APIs, and AI-driven applications.
-    Strong foundation in full-stack development, system design, and machine learning.
+    Passionate about building scalable systems, backend APIs, and AI-driven solutions. 
+    Strong foundation in software engineering, system design, and real-world problem solving.
   </p>
+
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="container">
-  <h2>💼 Experience & Leadership</h2>
+<section id="experience" class="py-24 px-6 max-w-6xl mx-auto">
 
-  <div class="grid">
-    <div class="card">
-      <h3>💻 Full-Stack Development</h3>
-      <p>Developed scalable MERN applications, REST APIs, and backend systems.</p>
+  <h2 class="text-4xl text-green-300 mb-10">💼 Experience & Leadership</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold">💻 Full Stack Development</h3>
+      <p class="text-gray-300 mt-3">
+        Built MERN stack applications with REST APIs, scalable backend systems, and production-ready architecture.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>🧠 AI / Machine Learning</h3>
-      <p>Worked on NLP models (GPT, T5, BERT) and evaluation techniques.</p>
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold">🧠 AI / ML Engineering</h3>
+      <p class="text-gray-300 mt-3">
+        Worked on NLP systems using transformers (GPT, T5, BERT), model training, evaluation, and optimization.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>🚗 Professional Driving</h3>
-      <p>Handled high-responsibility real-world operations requiring discipline and decision-making.</p>
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+      <h3 class="text-xl font-bold">🚗 Professional Driving</h3>
+      <p class="text-gray-300 mt-3">
+        High-responsibility role requiring discipline, decision-making, and time management under pressure.
+      </p>
     </div>
+
   </div>
+
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="container">
-  <h2>🚀 Projects</h2>
+<!-- PROJECTS (API DRIVEN) -->
+<section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
 
-  <div class="grid">
-    <div class="card">📊 Academic Management System (MERN)</div>
-    <div class="card">🧠 NLP QA System</div>
-    <div class="card">💾 SQL E-Trading System</div>
-    <div class="card">🤝 Collaboration Platform</div>
-  </div>
+  <h2 class="text-4xl text-green-300 mb-10">🚀 Projects</h2>
+
+  <div id="projectsContainer" class="grid md:grid-cols-4 gap-6"></div>
+
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="container">
-  <h2>🛠 Technical Skills</h2>
+<section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
 
-  <div class="tags">
-    <span>Python</span>
-    <span>Java</span>
-    <span>C++</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>SQL</span>
-    <span>MongoDB</span>
-    <span>AI/ML</span>
-    <span>Docker</span>
-    <span>Linux</span>
+  <h2 class="text-4xl text-green-300 mb-10">🛠 Skills</h2>
+
+  <div class="flex flex-wrap gap-3">
+    <span class="glass px-4 py-2 rounded">Python</span>
+    <span class="glass px-4 py-2 rounded">Java</span>
+    <span class="glass px-4 py-2 rounded">React</span>
+    <span class="glass px-4 py-2 rounded">Node.js</span>
+    <span class="glass px-4 py-2 rounded">SQL</span>
+    <span class="glass px-4 py-2 rounded">AI/ML</span>
+    <span class="glass px-4 py-2 rounded">Docker</span>
   </div>
+
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="container">
-  <h2>🎓 Education</h2>
+<section id="education" class="py-24 px-6 max-w-6xl mx-auto">
 
-  <div class="card">
-    <h3>Stony Brook University</h3>
-    <p>Bachelor of Science in Computer Science (Expected May 2026)</p>
-    <p>Specialization: Artificial Intelligence & Data Science</p>
+  <h2 class="text-4xl text-green-300 mb-10">🎓 Education</h2>
+
+  <div class="glass p-6 rounded-xl mb-5">
+    <h3 class="text-xl font-bold">Stony Brook University</h3>
+    <p>BS Computer Science (Expected May 2026)</p>
   </div>
 
-  <div class="card">
-    <h3>Borough of Manhattan Community College</h3>
-    <p>Associate of Science in Computer Science</p>
+  <div class="glass p-6 rounded-xl">
+    <h3 class="text-xl font-bold">BMCC</h3>
+    <p>Associate in Computer Science</p>
   </div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="container">
-  <h2>📩 Contact</h2>
+<section id="contact" class="py-24 text-center">
+
+  <h2 class="text-4xl text-green-300 mb-6">📩 Contact</h2>
 
   <p>Email: mghouse.salman@gmail.com</p>
 
-  <a href="https://github.com/mgs786" target="_blank">GitHub</a>
-  <a href="http://linkedin.com/in/muhammad-ghous-salman/" target="_blank">LinkedIn</a>
+  <div class="mt-4 space-x-4">
+    <a href="https://github.com/mgs786" class="text-green-300">GitHub</a>
+    <a href="http://linkedin.com/in/muhammad-ghous-salman/" class="text-green-300">LinkedIn</a>
+  </div>
 
 </section>
 
-<script src="script.js"></script>
+</div>
+
+<!-- ===== JAVASCRIPT (API STYLE) ===== -->
+<script>
+
+function scrollTopPage(){
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* PROJECTS DATA (LIKE API) */
+const projects = [
+  {title:"Academic System", desc:"MERN AutoPlanner system"},
+  {title:"NLP QA System", desc:"Transformer based QA"},
+  {title:"SQL Trading", desc:"E-trading DB system"},
+  {title:"Collaboration", desc:"Student platform"}
+];
+
+/* RENDER PROJECTS */
+const container = document.getElementById("projectsContainer");
+
+projects.forEach(p=>{
+  const card = document.createElement("div");
+
+  card.className = "glass p-5 rounded-xl hover:scale-105 transition cursor-pointer";
+
+  card.innerHTML = `
+    <h3 class="text-lg font-bold">${p.title}</h3>
+    <p class="text-gray-300 mt-2">${p.desc}</p>
+  `;
+
+  container.appendChild(card);
+});
+
+</script>
+
 </body>
 </html>
