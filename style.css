@@ -45,7 +45,8 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 100px;
+  align-items: center;   /* 🔥 centers horizontally */
+  text-align: center;    /* 🔥 centers text */
 }
 
 .hero h1 {
