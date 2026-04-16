@@ -13,7 +13,7 @@
 <header>
   <h1 class="logo">MGS</h1>
   <nav>
-    <a href="#">Home</a>
+    <a href="#hero">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -21,51 +21,65 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>Muhammad Ghous Salman</h1>
-  <p>Software Engineer | AI/ML</p>
-  <h2>Building Intelligent Systems & Scalable Applications</h2>
+<section id="hero" class="hero">
+  <div class="hero-left">
+    <h1>Muhammad Ghous Salman</h1>
+    <p>Software Engineer | AI/ML</p>
+    <h2>Building Intelligent Systems & Scalable Applications</h2>
+
+    <a href="#projects" class="btn">View My Work ↓</a>
+  </div>
+
+  <div class="hero-right"></div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade">
+<section id="about" class="section fade">
   <h2>About Me</h2>
   <p>
-    Computer Science graduate focused on Artificial Intelligence, full-stack development, and real-world systems.
-    Passionate about building scalable, production-ready applications.
+    Computer Science graduate from Stony Brook University with a strong focus on Artificial Intelligence, 
+    Data Science, and Full-Stack Development. Experienced in building scalable systems, backend APIs, 
+    and AI-powered applications including NLP models and academic planning platforms.
   </p>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="fade">
+<section id="projects" class="section fade">
   <h2>Projects</h2>
 
-  <div class="card">
-    <h3>Full-Stack Academic Platform</h3>
-    <p>MERN-based system with course registration, validation logic, and AutoPlanner.</p>
-  </div>
+  <div class="project-grid">
 
-  <div class="card">
-    <h3>AI/NLP Question Answering</h3>
-    <p>Fine-tuned transformer models (T5, GPT-2, DistilBERT).</p>
-  </div>
+    <div class="card">
+      <h3>Full-Stack Academic Management System (MERN)</h3>
+      <p>Multi-user system with course registration, validation engine, and AutoPlanner.</p>
+    </div>
 
-  <div class="card">
-    <h3>SQL E-Trading System</h3>
-    <p>Relational database with Java JDBC backend.</p>
-  </div>
+    <div class="card">
+      <h3>AI/NLP Question Answering System</h3>
+      <p>Fine-tuned transformer models (T5, GPT-2, DistilBERT) using BLEU, ROUGE, METEOR.</p>
+    </div>
 
+    <div class="card">
+      <h3>SQL E-Trading System</h3>
+      <p>Designed relational schema and implemented transactions using Java JDBC backend.</p>
+    </div>
+
+    <div class="card">
+      <h3>Student Collaboration Platform</h3>
+      <p>Platform for structured communication between students and instructors.</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="fade">
+<section id="contact" class="section fade">
   <h2>Contact</h2>
-  <p>Email: mghouse.salman@gmail.com</p>
-  <p>LinkedIn: linkedin.com/in/mghous</p>
+  <p>Email: muhammad.salman@stonybrook.edu</p>
   <p>GitHub: github.com/mgs786</p>
+  <p>LinkedIn: linkedin.com/in/mghous</p>
 </section>
 
-<!-- SCRIPT -->
 <script src="script.js"></script>
 
 </body>
