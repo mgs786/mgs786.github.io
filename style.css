@@ -5,13 +5,12 @@ body {
   color: white;
 }
 
-/* LIGHTER + COLORFUL OVERLAY (FIXED) */
+/* CLEAN OVERLAY */
 .overlay {
   background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.45),
-    rgba(0,60,40,0.35),
-    rgba(255,80,80,0.25)
+    rgba(0,0,0,0.4),
+    rgba(0,50,40,0.3),
+    rgba(255,0,0,0.2)
   );
 }
 
@@ -23,13 +22,12 @@ header {
   display: flex;
   justify-content: space-between;
   background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .logo {
   color: #ff4d5a;
   font-size: 24px;
-  cursor: pointer;
 }
 
 /* HERO */
@@ -43,15 +41,19 @@ header {
 
 .main-title {
   font-size: 90px;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ffffff, #7fffd4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
 .subtitle {
-  margin-top: 20px;
+  font-size: 28px;
   color: #ff4d5a;
+  font-weight: bold;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: auto;
+  color: #ddd;
 }
 
 /* BUTTONS */
@@ -59,18 +61,26 @@ header {
   margin: 20px;
   padding: 12px 25px;
   border-radius: 8px;
-  border: 1px solid #7fffd4;
+  border: 1px solid white;
 }
 
 .primary {
   background: #ff4d5a;
 }
 
-/* SECTIONS */
+/* SECTION */
 .container {
+  padding: 120px 20px;
   max-width: 1100px;
   margin: auto;
-  padding: 120px 20px;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 40px;
+  font-weight: 900;
+  color: #ff4d5a;
+  margin-bottom: 30px;
 }
 
 /* GRID */
@@ -80,35 +90,53 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
 }
 
-/* CARDS */
+/* CARD */
 .card {
   padding: 25px;
   border-radius: 15px;
-  background: rgba(255,255,255,0.15); /* FIXED VISIBILITY */
-  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
 
-/* TAGS */
-.tags span {
-  display: inline-block;
-  margin: 6px;
-  padding: 10px 14px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 8px;
+/* BIG CARD */
+.big-card {
+  margin-bottom: 20px;
 }
 
-/* PROFILE IMAGE FIXED (VISIBLE NOW) */
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.skill-block {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* IMAGE FIXED */
 .about-image {
   position: absolute;
   right: 5%;
-  top: 120px;
-  width: 260px;
-  opacity: 0.7; /* FIXED */
-  filter: blur(0.5px); /* LESS BLUR */
+  width: 280px;
+  opacity: 0.9;
   border-radius: 20px;
+}
+
+/* APPLE SCROLL EFFECT */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

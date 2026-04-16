@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammad Ghous Salman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Ghous Salman</title>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="overlay">
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <header>
   <h1 class="logo" onclick="scrollTopPage()">MGS</h1>
-
   <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
@@ -36,9 +33,9 @@
     Muhammad Ghous Salman
   </h1>
 
-  <p class="subtitle">
+  <h2 class="subtitle">
     🚀 Software Engineer | AI/ML Specialist
-  </p>
+  </h2>
 
   <p class="hero-text">
     Building scalable backend systems, intelligent AI-powered applications,
@@ -53,13 +50,13 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="container">
+<section id="about" class="container reveal">
 
-  <h2>👨‍💻 About Me</h2>
+  <h2 class="section-title">👨‍💻 About Me</h2>
 
   <img src="profile.jpeg" class="about-image"/>
 
-  <p>
+  <p class="big-text">
     Computer Science student at Stony Brook University specializing in Artificial Intelligence & Data Science.
     Passionate about building scalable systems, backend APIs, and AI-driven solutions.
     Strong foundation in software engineering, system design, and real-world problem solving.
@@ -68,34 +65,25 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="container">
+<section id="experience" class="container reveal">
 
-  <h2>💼 Experience & Leadership</h2>
+  <h2 class="section-title">💼 Work Experience</h2>
 
   <div class="grid">
 
     <div class="card">
-      <h3>💻 Full Stack Development</h3>
-      <p>
-        Developed MERN stack applications with REST APIs, authentication,
-        scalable backend architecture, and production deployment.
-      </p>
+      <h3>Junior Software Support</h3>
+      <p>Maintained website content and designed materials for business operations.</p>
     </div>
 
     <div class="card">
-      <h3>🧠 AI / Machine Learning</h3>
-      <p>
-        Built NLP systems using GPT, T5, BERT models with training,
-        evaluation (BLEU, ROUGE), and optimization techniques.
-      </p>
+      <h3>Chauffeur Driver</h3>
+      <p>Premium transportation services with route optimization and scheduling.</p>
     </div>
 
     <div class="card">
-      <h3>🚗 Professional Driving</h3>
-      <p>
-        Managed high-responsibility real-world operations requiring
-        discipline, time management, and decision-making under pressure.
-      </p>
+      <h3>Gas Station Manager</h3>
+      <p>Managed inventory, staff, and operations in high-volume environment.</p>
     </div>
 
   </div>
@@ -103,30 +91,30 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="container">
+<section id="projects" class="container reveal">
 
-  <h2>🚀 Projects</h2>
+  <h2 class="section-title">🚀 Projects</h2>
 
   <div class="grid">
 
     <div class="card">
       <h3>Academic Management System</h3>
-      <p>MERN AutoPlanner, validation engine, course scheduling</p>
+      <p>MERN AutoPlanner, validation engine, scheduling, role-based access.</p>
     </div>
 
     <div class="card">
       <h3>AI/NLP QA System</h3>
-      <p>Transformer-based question answering (GPT, T5)</p>
+      <p>T5, GPT, DistilBERT models with BLEU/ROUGE evaluation.</p>
     </div>
 
     <div class="card">
-      <h3>SQL E-Trading Platform</h3>
-      <p>Relational DB system with transactions & constraints</p>
+      <h3>SQL Trading Platform</h3>
+      <p>Relational DB system with transactions, joins, and JDBC.</p>
     </div>
 
     <div class="card">
       <h3>Collaboration Platform</h3>
-      <p>Student-instructor structured communication system</p>
+      <p>Designed academic communication system and UX flows.</p>
     </div>
 
   </div>
@@ -134,49 +122,84 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="container">
+<section id="skills" class="container reveal">
 
-  <h2>🛠 Technical Skills</h2>
+  <h2 class="section-title">🛠 Technical Skills</h2>
 
-  <div class="tags">
-    <span>Python</span>
-    <span>Java</span>
-    <span>C/C++</span>
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>SQL</span>
-    <span>MongoDB</span>
-    <span>Docker</span>
-    <span>Git</span>
-    <span>AI/ML</span>
-    <span>PyTorch</span>
+  <div class="skills-grid">
+
+    <div class="skill-block">
+      <h4>Programming</h4>
+      <p>Python, C, C++, Java, JavaScript, SQL, Bash, Ruby</p>
+    </div>
+
+    <div class="skill-block">
+      <h4>Frameworks</h4>
+      <p>React, Node.js, Express, PyTorch, OpenCV</p>
+    </div>
+
+    <div class="skill-block">
+      <h4>Databases</h4>
+      <p>MySQL, MongoDB, SQL Joins, Transactions, JDBC</p>
+    </div>
+
+    <div class="skill-block">
+      <h4>AI/ML</h4>
+      <p>Transformers, Neural Networks, Clustering</p>
+    </div>
+
+    <div class="skill-block">
+      <h4>Tools</h4>
+      <p>Git, Docker, Linux, Jupyter, VS Code</p>
+    </div>
+
   </div>
 
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="container">
+<section id="education" class="container reveal">
 
-  <h2>🎓 Education</h2>
+  <h2 class="section-title">🎓 Education</h2>
 
-  <div class="card">
+  <div class="card big-card">
     <h3>Stony Brook University</h3>
     <p>BS Computer Science (Expected May 2026)</p>
     <p>Specialization: AI & Data Science</p>
   </div>
 
-  <div class="card">
-    <h3>Borough of Manhattan Community College</h3>
-    <p>Associate of Science in Computer Science</p>
+  <div class="card big-card">
+    <h3>BMCC</h3>
+    <p>Associate in Computer Science</p>
+  </div>
+
+</section>
+
+<!-- EXTRA -->
+<section class="container reveal">
+
+  <h2 class="section-title">🌟 Extras</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Extracurricular</h3>
+      <p>SBU cybersecurity, programming, badminton clubs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Current Projects</h3>
+      <p>Ride analytics app, dashboards, route optimization.</p>
+    </div>
+
   </div>
 
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="container">
+<section id="contact" class="container reveal">
 
-  <h2>📩 Contact</h2>
+  <h2 class="section-title">📩 Contact</h2>
 
   <p>Email: mghouse.salman@gmail.com</p>
 
