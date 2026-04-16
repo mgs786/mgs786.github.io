@@ -1,8 +1,4 @@
-function scrollTopPage() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-/* SCROLL REVEAL */
+// SCROLL REVEAL
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -14,45 +10,42 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* TYPEWRITER */
+// TYPE EFFECT
 const roles = [
   "Software Engineer",
   "AI/ML Specialist",
-  "Full Stack Developer"
+  "Full Stack Developer",
+  "System Designer"
 ];
 
-let i = 0, j = 0;
-let current = "", deleting = false;
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
 
-function type() {
-  const el = document.getElementById("dynamic-role");
+function typeEffect() {
+  const element = document.getElementById("dynamic-text");
 
-  if (!deleting) {
-    current = roles[i].substring(0, j++);
+  if (!element) return;
+
+  current = roles[i];
+
+  if (!isDeleting) {
+    element.textContent = current.substring(0, j++);
+    if (j > current.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    }
   } else {
-    current = roles[i].substring(0, j--);
+    element.textContent = current.substring(0, j--);
+    if (j === 0) {
+      isDeleting = false;
+      i = (i + 1) % roles.length;
+    }
   }
 
-  el.textContent = current;
-
-  if (!deleting && j === roles[i].length) {
-    deleting = true;
-    setTimeout(type, 1000);
-    return;
-  }
-
-  if (deleting && j === 0) {
-    deleting = false;
-    i = (i + 1) % roles.length;
-  }
-
-  setTimeout(type, deleting ? 50 : 100);
+  setTimeout(typeEffect, 80);
 }
 
-type();
-
-/* PARALLAX */
-window.addEventListener("scroll", () => {
-  document.body.style.backgroundPositionY =
-    window.scrollY * 0.3 + "px";
-});
+typeEffect();

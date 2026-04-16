@@ -1,64 +1,158 @@
-// SCROLL TO TOP
-function scrollTopPage() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Ghous Salman</title>
 
-/* APPLE SCROLL REVEAL */
-const reveals = document.querySelectorAll(".reveal");
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
-});
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-/* 🔥 TYPEWRITER EFFECT */
-const roles = [
-  "Software Engineer",
-  "AI/ML Specialist",
-  "Full Stack Developer",
-  "System Designer"
-];
+<body>
 
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">MGS</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-function typeEffect() {
-  const element = document.getElementById("dynamic-role");
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Muhammad Ghous Salman</h1>
+    <h2 id="dynamic-text"></h2>
 
-  if (!element) return;
+    <p>
+      Building scalable systems, AI-powered applications, and production-ready software
+      that solves real-world problems.
+    </p>
 
-  if (!isDeleting) {
-    current = roles[i].substring(0, j++);
-  } else {
-    current = roles[i].substring(0, j--);
-  }
+    <div class="buttons">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn secondary">Contact</a>
+    </div>
+  </div>
+</section>
 
-  element.textContent = current;
+<!-- ABOUT -->
+<section id="about" class="section glass reveal">
+  <h2>About Me</h2>
+  <p>
+    Computer Science student at Stony Brook University specializing in Artificial Intelligence and Data Science.
+    Passionate about building scalable systems, backend APIs, and AI-driven solutions.
+    Strong foundation in software engineering, system design, and real-world problem solving.
+    <br><br>
+    Beyond tech, I enjoy cricket, fitness, strategic thinking, and staying informed about global trends and politics.
+  </p>
+</section>
 
-  if (!isDeleting && j === roles[i].length) {
-    isDeleting = true;
-    setTimeout(typeEffect, 1000);
-    return;
-  }
+<!-- EXPERIENCE -->
+<section id="experience" class="section reveal">
+  <h2>Experience</h2>
 
-  if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % roles.length;
-  }
+  <div class="card-grid">
 
-  setTimeout(typeEffect, isDeleting ? 50 : 100);
-}
+    <div class="card">
+      <h3>Junior Software Support</h3>
+      <p>Maintained website content and designed materials for business operations.</p>
+    </div>
 
-typeEffect();
+    <div class="card">
+      <h3>Chauffeur Driver</h3>
+      <p>Delivered premium transportation with efficiency and professionalism.</p>
+    </div>
 
-/* 🔥 PARALLAX BACKGROUND */
-window.addEventListener("scroll", () => {
-  document.body.style.backgroundPositionY =
-    window.scrollY * 0.3 + "px";
-});
+    <div class="card">
+      <h3>Gas Station Manager</h3>
+      <p>Managed operations, inventory, and improved customer experience.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+  <h2>Projects</h2>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Academic Management System</h3>
+      <p>MERN AutoPlanner, validation engine, scheduling</p>
+    </div>
+
+    <div class="card">
+      <h3>NLP QA System</h3>
+      <p>Transformer-based question answering (GPT, T5)</p>
+    </div>
+
+    <div class="card">
+      <h3>SQL Trading Platform</h3>
+      <p>Relational DB system with transactions</p>
+    </div>
+
+    <div class="card">
+      <h3>Collaboration Platform</h3>
+      <p>Student-instructor communication system</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <h2>Technical Skills</h2>
+
+  <div class="skills">
+    <span>Python</span>
+    <span>Java</span>
+    <span>C++</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Node.js</span>
+    <span>SQL</span>
+    <span>MongoDB</span>
+    <span>Docker</span>
+    <span>Git</span>
+    <span>AI/ML</span>
+    <span>PyTorch</span>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section glass reveal">
+  <h2>Education</h2>
+
+  <p><strong>Stony Brook University</strong><br>
+  BS Computer Science — AI & Data Science</p>
+
+  <br>
+
+  <p><strong>BMCC</strong><br>
+  Associate Degree — Dean’s List (Spring & Fall)</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
+
+  <p>Email: mghouse.salman@gmail.com</p>
+  <p><a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+</section>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
