@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,43 +6,53 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-body {
-  background: radial-gradient(circle at top, #112240, #020c1b);
-  color: #ccd6f6;
-  line-height: 1.6;
-}
+/* COLORS */
 :root {
-  --primary-blue: #0a192f;
+  --primary-blue: #020c1b;
   --secondary-blue: #112240;
   --accent-red: #ff4d5a;
+  --highlight: #64ffda;
   --text-white: #ccd6f6;
 }
+
+/* BODY */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top, #112240, #020c1b);
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
 /* NAVBAR */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background: rgba(10, 25, 47, 0.8);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
-.hero h1 {
-  font-size: 64px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ffffff, #64ffda, #ff4d5a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.logo {
+  color: var(--accent-red);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
 }
 
 header nav a {
   margin-left: 25px;
   text-decoration: none;
-  color: #64ffda;
+  color: var(--highlight);
   transition: 0.3s;
+  font-weight: 500;
 }
 
 header nav a:hover {
@@ -54,11 +65,18 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;   /* 🔥 centers horizontally */
-  text-align: center;    /* 🔥 centers text */
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 120px;
 }
 
-
+.hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #64ffda, #ff4d5a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .hero p {
   color: var(--accent-red);
@@ -66,9 +84,49 @@ header nav a:hover {
   font-weight: 500;
 }
 
+.hero h2 {
+  margin-top: 20px;
+  color: var(--highlight);
+  font-size: 20px;
+}
+
+/* HERO ANIMATION */
+.hero h1,
+.hero p,
+.hero h2 {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero p {
+  animation-delay: 0.2s;
+}
+
+.hero h2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* SECTIONS */
 section {
-  padding: 100px;
+  padding: 100px 120px;
+}
+
+/* HEADINGS */
+h2 {
+  margin-bottom: 20px;
+  color: var(--highlight);
+  font-size: 28px;
 }
 
 /* CARDS */
@@ -82,18 +140,27 @@ section {
   backdrop-filter: blur(10px);
 }
 
+.card h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card p {
+  color: #8892b0;
+}
+
 .card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-8px) scale(1.02);
   border: 1px solid var(--accent-red);
 }
 
-/* HEADINGS */
-h2 {
-  margin-bottom: 20px;
-  color: #64ffda;
+/* SKILLS */
+#contact p {
+  color: #8892b0;
+  margin-top: 10px;
 }
 
-/* ANIMATION */
+/* FADE ANIMATION ON SCROLL */
 .fade {
   opacity: 0;
   transform: translateY(30px);
@@ -104,8 +171,21 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
-.hero h2 {
-  margin-top: 20px;
-  color: #64ffda;
-  font-size: 20px;
+
+/* SCROLLBAR (OPTIONAL BUT CLEAN) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #112240;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
 }
