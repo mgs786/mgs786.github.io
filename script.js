@@ -1,14 +1,7 @@
-const sections = document.querySelectorAll('.fade');
-
-window.addEventListener('scroll', () => {
-  sections.forEach(sec => {
-    const offset = sec.offsetTop - 300;
-    if (window.scrollY > offset) {
-      sec.classList.add('show');
-    }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
   });
 });
-
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
