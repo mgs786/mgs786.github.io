@@ -18,8 +18,7 @@ body {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.8);
 }
 
 .navbar ul {
@@ -31,7 +30,6 @@ body {
   color: white;
   margin-left: 20px;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .navbar a:hover {
@@ -42,23 +40,19 @@ body {
 .hero {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 800;
 }
 
 .hero h2 {
   color: red;
   margin: 10px 0;
-}
-
-.buttons {
-  margin-top: 20px;
 }
 
 .btn {
@@ -75,18 +69,27 @@ body {
 
 .secondary {
   border: 1px solid white;
-  color: white;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
   padding: 100px 60px;
 }
 
-/* FIX: ABOUT BACKGROUND */
 .glass {
-  background: rgba(0,0,0,0.7); /* DARK FIX */
-  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+
+/* ABOUT FIX */
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 300px;
   border-radius: 10px;
 }
 
@@ -107,7 +110,7 @@ body {
 
 .card:hover {
   transform: translateY(-10px);
-  background: rgba(255,0,0,0.6);
+  background: rgba(255,0,0,0.7);
 }
 
 /* SKILLS */
@@ -117,14 +120,13 @@ body {
   margin: 5px;
   display: inline-block;
   border-radius: 5px;
-  transition: 0.3s;
 }
 
 .skills span:hover {
   background: red;
 }
 
-/* SCROLL ANIMATION */
+/* ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(40px);

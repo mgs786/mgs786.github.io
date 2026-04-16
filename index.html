@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammad Ghous Salman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Ghous Salman</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">MGS</div>
+  <div class="logo" onclick="scrollTopPage()">MGS</div>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -34,8 +30,7 @@
     <h2 id="dynamic-text"></h2>
 
     <p>
-      Building scalable systems, AI-powered applications, and production-ready software
-      that solves real-world problems.
+      Software Engineer passionate about AI, scalable backend systems, and real-world solutions.
     </p>
 
     <div class="buttons">
@@ -46,36 +41,49 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section glass reveal">
-  <h2>About Me</h2>
-  <p>
-    Computer Science student at Stony Brook University specializing in Artificial Intelligence and Data Science.
-    Passionate about building scalable systems, backend APIs, and AI-driven solutions.
-    Strong foundation in software engineering, system design, and real-world problem solving.
-    <br><br>
-    Beyond tech, I enjoy cricket, fitness, strategic thinking, and staying informed about global trends and politics.
-  </p>
+<section id="about" class="section reveal glass about-container">
+
+  <div class="about-text">
+    <h2>👨‍💻 About Me</h2>
+
+    <p>
+      I am a Computer Science student at <strong>Stony Brook University</strong> specializing in
+      <strong>Artificial Intelligence & Data Science</strong>.
+      I focus on building scalable backend systems, REST APIs, and AI-powered applications.
+    </p>
+
+    <p>
+      Beyond tech, I am highly disciplined, passionate about performance, and deeply interested
+      in strategy, global affairs, and leadership. I enjoy cricket, fitness, and building
+      systems that solve real-world problems.
+    </p>
+  </div>
+
+  <div class="about-image">
+    <img src="profile.jpeg" alt="Profile">
+  </div>
+
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience" class="section reveal">
-  <h2>Experience</h2>
+  <h2>💼 Experience</h2>
 
   <div class="card-grid">
 
     <div class="card">
-      <h3>Junior Software Support</h3>
-      <p>Maintained website content and designed materials for business operations.</p>
+      <h3>💻 Junior Software Support</h3>
+      <p>Maintained websites and supported business operations.</p>
     </div>
 
     <div class="card">
-      <h3>Chauffeur Driver</h3>
-      <p>Delivered premium transportation with efficiency and professionalism.</p>
+      <h3>🚗 Chauffeur Driver</h3>
+      <p>Delivered premium transportation with discipline and precision.</p>
     </div>
 
     <div class="card">
-      <h3>Gas Station Manager</h3>
-      <p>Managed operations, inventory, and improved customer experience.</p>
+      <h3>⛽ Gas Station Manager</h3>
+      <p>Managed operations, inventory, and improved efficiency.</p>
     </div>
 
   </div>
@@ -83,28 +91,28 @@
 
 <!-- PROJECTS -->
 <section id="projects" class="section reveal">
-  <h2>Projects</h2>
+  <h2>🚀 Projects</h2>
 
   <div class="card-grid">
 
     <div class="card">
       <h3>Academic Management System</h3>
-      <p>MERN AutoPlanner, validation engine, scheduling</p>
+      <p>MERN AutoPlanner, validation, scheduling engine.</p>
     </div>
 
     <div class="card">
       <h3>NLP QA System</h3>
-      <p>Transformer-based question answering (GPT, T5)</p>
+      <p>Transformer-based system (GPT, T5).</p>
     </div>
 
     <div class="card">
-      <h3>SQL Trading Platform</h3>
-      <p>Relational DB system with transactions</p>
+      <h3>SQL Trading System</h3>
+      <p>Relational DB system with transactions.</p>
     </div>
 
     <div class="card">
       <h3>Collaboration Platform</h3>
-      <p>Student-instructor communication system</p>
+      <p>Student communication system.</p>
     </div>
 
   </div>
@@ -112,7 +120,7 @@
 
 <!-- SKILLS -->
 <section id="skills" class="section reveal">
-  <h2>Technical Skills</h2>
+  <h2>⚡ Technical Skills</h2>
 
   <div class="skills">
     <span>Python</span>
@@ -131,27 +139,35 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="section glass reveal">
-  <h2>Education</h2>
+<section id="education" class="section reveal glass">
+  <h2>🎓 Education</h2>
 
-  <p><strong>Stony Brook University</strong><br>
-  BS Computer Science — AI & Data Science</p>
+  <p>
+    <strong>Stony Brook University</strong><br>
+    Bachelor of Science in Computer Science<br>
+    Specialization: Artificial Intelligence & Data Science
+  </p>
 
   <br>
 
-  <p><strong>BMCC</strong><br>
-  Associate Degree — Dean’s List (Spring & Fall)</p>
+  <p>
+    <strong>Borough of Manhattan Community College (BMCC)</strong><br>
+    Associate of Science in Computer Science<br>
+    Dean’s List Honors (Spring & Fall)
+  </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section reveal">
-  <h2>Contact</h2>
+  <h2>📩 Contact</h2>
 
   <p>Email: mghouse.salman@gmail.com</p>
-  <p><a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+  <p>
+    <a href="#">GitHub</a> |
+    <a href="#">LinkedIn</a>
+  </p>
 </section>
 
-<!-- JS -->
 <script src="script.js"></script>
 
 </body>

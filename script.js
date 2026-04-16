@@ -1,4 +1,7 @@
-// SCROLL REVEAL
+function scrollTopPage() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -10,24 +13,17 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// TYPE EFFECT
 const roles = [
   "Software Engineer",
   "AI/ML Specialist",
-  "Full Stack Developer",
-  "System Designer"
+  "Full Stack Developer"
 ];
 
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
+let i = 0, j = 0;
+let current = "", isDeleting = false;
 
 function typeEffect() {
   const element = document.getElementById("dynamic-text");
-
-  if (!element) return;
-
   current = roles[i];
 
   if (!isDeleting) {
