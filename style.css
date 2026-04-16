@@ -6,38 +6,49 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY */
+/* BODY WITH IMAGE BACKGROUND */
 body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
+  background: url('profile.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
-/* NAVBAR */
+/* DARK OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(10, 20, 30, 0.85);
+  z-index: -1;
+}
+
+/* NAV */
 header {
   position: fixed;
   width: 100%;
-  padding: 20px 60px;
+  padding: 20px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
 }
 
 .logo {
+  font-size: 28px;
   color: #ff4d5a;
-  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 30px;
+  font-size: 18px;
   color: #64ffda;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
 }
 
 nav a:hover {
@@ -48,74 +59,62 @@ nav a:hover {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   height: 100vh;
-  padding: 0 120px;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
-.hero-left {
-  max-width: 600px;
+.hero h1 {
+  font-size: 80px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffffff, #64ffda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero-left h1 {
-  font-size: 70px;
-  line-height: 1.1;
-}
-
-.hero-left h2 {
-  margin-top: 15px;
-  font-size: 26px;
+.hero h2 {
+  margin-top: 20px;
+  font-size: 28px;
   color: #ff4d5a;
 }
 
-.hero-left p {
+.hero p {
   margin-top: 20px;
+  max-width: 700px;
   color: #ccc;
   font-size: 18px;
-}
-
-.hero-right img {
-  width: 420px;
-  border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
 /* BUTTONS */
 .btn {
   display: inline-block;
   padding: 12px 25px;
-  margin-top: 20px;
+  margin: 20px 10px;
   border-radius: 8px;
   text-decoration: none;
-  margin-right: 10px;
-  transition: 0.3s;
 }
 
 .primary {
   background: #ff4d5a;
-  color: white;
-}
-
-.primary:hover {
-  background: #ff2a3c;
-}
-
-.btn:not(.primary) {
-  border: 1px solid white;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: scale(1.05);
 }
 
 /* SECTIONS */
 .container {
-  padding: 120px 120px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 120px 20px;
+  text-align: center;
 }
 
 h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
+  font-size: 40px;
+  margin-bottom: 40px;
   color: #64ffda;
 }
 
@@ -128,28 +127,29 @@ h2 {
 
 /* CARD */
 .card {
-  background: rgba(255,255,255,0.05);
   padding: 25px;
   border-radius: 12px;
+  background: rgba(255,255,255,0.05);
   transition: 0.3s;
-  backdrop-filter: blur(10px);
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border: 1px solid #ff4d5a;
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.1);
 }
 
-/* TAGS */
+/* SKILLS */
 .tags span {
   display: inline-block;
-  background: rgba(255,255,255,0.08);
   padding: 10px 15px;
-  margin: 5px;
+  margin: 8px;
+  background: rgba(255,255,255,0.1);
   border-radius: 8px;
-  transition: 0.3s;
 }
 
-.tags span:hover {
-  background: #ff4d5a;
+/* CONTACT LINKS */
+#contact a {
+  display: block;
+  margin: 10px;
+  color: #64ffda;
 }
