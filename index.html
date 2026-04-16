@@ -10,9 +10,9 @@
 <body>
 
 <header>
-  <h1 class="logo">MGS</h1>
+  <h1 class="logo" onclick="scrollTopPage()">MGS</h1>
+
   <nav>
-    <a href="#">Home</a>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
@@ -22,165 +22,80 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
+  <div class="hero-left">
     <h1>Muhammad Ghous Salman</h1>
-    <h3>🚀 Software Engineer | AI/ML Specialist</h3>
+    <h2>🚀 Software Engineer | AI/ML</h2>
     <p>
-      Building scalable systems, intelligent applications, and production-ready software that solves real-world problems.
+      Building scalable systems, intelligent applications, and production-ready software.
     </p>
 
-    <div class="buttons">
-      <a href="#projects">🚀 View Projects</a>
-      <a href="#contact">📩 Contact Me</a>
+    <div class="btns">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn">Contact</a>
     </div>
   </div>
 
-  <img src="profile.jpeg" class="profile">
+  <div class="hero-right">
+    <img src="profile.jpeg">
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<section id="about" class="container">
   <h2>👨‍💻 About Me</h2>
   <p>
-    I am a Computer Science student at Stony Brook University specializing in Artificial Intelligence and Data Science. 
-    My focus lies in building scalable backend systems, AI-powered applications, and full-stack platforms.
-  </p>
-
-  <p>
-    I enjoy solving complex real-world problems using technology, combining strong software engineering fundamentals 
-    with modern AI techniques. My goal is to work at top-tier tech companies and contribute to impactful, intelligent systems.
+    Computer Science student at Stony Brook University specializing in Artificial Intelligence and Data Science.
+    Passionate about building scalable backend systems and AI-powered applications.
   </p>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2>💼 Experience & Leadership</h2>
+<section id="experience" class="container">
+  <h2>💼 Experience</h2>
 
-  <div class="card">
-    <h3>💻 Software Development</h3>
-    <p>
-      Designed and developed full-stack applications using MERN stack with scalable backend architecture, 
-      REST APIs, and production-level design principles.
-    </p>
+  <div class="grid">
+    <div class="card">💻 Full-Stack Development</div>
+    <div class="card">🧠 AI/ML Engineering</div>
+    <div class="card">🚗 Professional Driving</div>
   </div>
-
-  <div class="card">
-    <h3>🧠 AI / Machine Learning Engineering</h3>
-    <p>
-      Built NLP systems using transformer models (GPT-2, T5, DistilBERT). Worked with training, evaluation, 
-      and optimization techniques using BLEU, ROUGE, and METEOR metrics.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🚗 Professional Driving & Responsibility</h3>
-    <p>
-      Managed high-responsibility roles requiring discipline, time management, decision-making, and 
-      real-world problem solving under pressure.
-    </p>
-  </div>
-
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="container">
   <h2>🚀 Projects</h2>
 
   <div class="grid">
-
-    <div class="card">
-      <h3>📊 Academic Management System (MERN)</h3>
-      <p>
-        Full-stack platform with course registration, validation engine, AutoPlanner, and intelligent scheduling.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🧠 AI/NLP Question Answering</h3>
-      <p>
-        Fine-tuned transformer models including GPT-2, T5, and DistilBERT for intelligent Q&A systems.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>💾 SQL E-Trading System</h3>
-      <p>
-        Designed relational database schema and implemented transaction logic using Java JDBC backend.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🤝 Collaboration Platform</h3>
-      <p>
-        Built communication platform for structured interaction between students and instructors.
-      </p>
-    </div>
-
+    <div class="card">📊 Academic System</div>
+    <div class="card">🧠 NLP QA System</div>
+    <div class="card">💾 SQL Trading</div>
+    <div class="card">🤝 Collaboration</div>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2>🛠 Technical Skills</h2>
+<section id="skills" class="container">
+  <h2>🛠 Skills</h2>
 
-  <div class="grid">
-
-    <div class="card">
-      <h3>💻 Languages</h3>
-      <p>Python, C, C++, Java, JavaScript, SQL, Bash, HTML, CSS, Ruby</p>
-    </div>
-
-    <div class="card">
-      <h3>⚙ Frameworks</h3>
-      <p>React, Node.js, Express, Pandas, NumPy, PyTorch, OpenCV, Scikit-learn</p>
-    </div>
-
-    <div class="card">
-      <h3>🗄 Databases</h3>
-      <p>MySQL, MongoDB, Relational Databases, Transactions, Indexing, JDBC</p>
-    </div>
-
-    <div class="card">
-      <h3>🧠 AI / ML</h3>
-      <p>Neural Networks, Transformers, Clustering, Model Training, Data Processing</p>
-    </div>
-
-    <div class="card">
-      <h3>⚡ Tools</h3>
-      <p>Git, GitHub, Docker, Linux, VS Code, Jupyter Notebook</p>
-    </div>
-
+  <div class="tags">
+    <span>Python</span>
+    <span>Java</span>
+    <span>React</span>
+    <span>Node</span>
+    <span>SQL</span>
+    <span>AI/ML</span>
+    <span>Docker</span>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
+<section id="education" class="container">
   <h2>🎓 Education</h2>
-
-  <div class="card">
-    <h3>Stony Brook University</h3>
-    <p>Bachelor of Science in Computer Science (Expected May 2026)</p>
-    <p>Specialization: Artificial Intelligence & Data Science</p>
-  </div>
-
-  <div class="card">
-    <h3>Borough of Manhattan Community College</h3>
-    <p>Associate of Science in Computer Science</p>
-  </div>
-
+  <p>Stony Brook University - BS Computer Science</p>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="container">
   <h2>📩 Contact</h2>
-  <p>Email: <a href="mailto:mghouse.salman@gmail.com">mghouse.salman@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/mgs786" target="_blank">github.com/mgs786</a></p>
-  <p>LinkedIn: <a href="http://linkedin.com/in/muhammad-ghous-salman/" target="_blank">linkedin.com/in/muhammad-ghous-salman</a></p>
+  <p>Email: mghouse.salman@gmail.com</p>
+  <p><a href="https://github.com/mgs786">GitHub</a></p>
+  <p><a href="http://linkedin.com/in/muhammad-ghous-salman/">LinkedIn</a></p>
 </section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
