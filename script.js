@@ -2,11 +2,13 @@ const sections = document.querySelectorAll('.fade');
 
 window.addEventListener('scroll', () => {
   sections.forEach(sec => {
-    const top = window.scrollY;
-    const offset = sec.offsetTop - 400;
-
-    if (top > offset) {
+    const offset = sec.offsetTop - 300;
+    if (window.scrollY > offset) {
       sec.classList.add('show');
     }
   });
 });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
